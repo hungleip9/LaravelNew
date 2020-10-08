@@ -16,6 +16,39 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('hello1', function () {
+    return view('hello1');
+});
+Route::prefix('task')->group(function (){
+    Route::get('/create', function () {
+        return view('task.create');
+    })->name('task.create');
+    Route::get('/edit', function () {
+        $name = "Hoc lap trinh";
+//        return view('task.edit',[
+//            'name' => $name
+//        ]);
+//      return view('task.edit')->with('name', $name); cach 1
+        return view('task.edit')->with(['name' => $name]); // cach 2
+
+
+    })->name('task.edit');
+    Route::get('/list', function () {
+        return view('task.list',[
+            'records' => [
+                1,2,3
+            ],
+            'i' => 2
+        ]);
+    })->name('task.list');
+});
+
+
+
+
+Route::get('hello2', function () {
+    return view('hello2');
+});
 ////xoa
 //Route::delete('/task/delete', function () {
 //    dd('delete');
@@ -30,6 +63,7 @@ Route::get('user/{id?}', function($id = null) {
     echo route('trump');
     return 'User ' . $id;
 });
+
 Route::get('u/{id?}', function($id = null) {
     echo route('trump');
     return ' User ' . $id;
