@@ -29,5 +29,7 @@ class AppServiceProvider extends ServiceProvider
            'Trang chu'
        ];
        View::share('menus',$menus);
+       $value = 'Hoc Lap Trinh';
+        View::share('value',$value);
     }
 }

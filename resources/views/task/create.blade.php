@@ -10,7 +10,7 @@
                 <!-- Display Validation Errors -->
 
                 <!-- New Task Form -->
-                <form action="{{ url('task')}}" method="POST" class="form-horizontal">
+                <form action="{{ route('task.store') }}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
 
                 <!-- Task Name -->
@@ -18,7 +18,8 @@
                         <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
 
                         <div class="col-sm-6">
-                            <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
+                            <input type="text" name="name" id="task-name" class="form-control" value="{{ $value }}">
+                            <input type="text" name="email" id="task-name" class="form-control" value="Email">
                         </div>
                     </div>
 
