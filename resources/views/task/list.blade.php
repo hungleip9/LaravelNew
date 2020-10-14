@@ -11,7 +11,7 @@
                 <!-- Display Validation Errors -->
 
                 <!-- New Task Form -->
-                <form action="{{ url('task')}}" method="POST" class="form-horizontal">
+                <form action="{{ route('task.store')}}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
 
                 <!-- Task Name -->
@@ -20,6 +20,10 @@
 
                         <div class="col-sm-6">
                             <input type="text" name="name" id="task-name" class="form-control" value="{{ $value }}">
+                        </div><br><br>
+                        <label for="task-name" class="col-sm-3 control-label">Deadline</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="deadline" id="task-name" class="form-control" value="Deadline">
                         </div>
                     </div>
 
@@ -40,14 +44,20 @@
                 Danh sách công việc hiện tại
             </div>
 
+
             <div class="panel-body">
                 <table class="table table-striped task-table">
                     <thead>
+                    <th>ID</th>
                     <th>Tên công việc</th>
                     <th>&nbsp;</th>
                     </thead>
                     <tbody>
+
                     <tr>
+
+
+                        <td>1</td>
                         <td class="table-text"><div>Làm bài tập Laravel </div></td>
                         <!-- Task Complete Button -->
                         <td>
@@ -68,6 +78,7 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>2</td>
                         <td class="table-text"><div>Làm bài tập PHP  </div></td>
                         <!-- Task Complete Button -->
                         <td>
@@ -88,10 +99,11 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>3</td>
                         <td class="table-text"><div><strike>Làm project Laravel </strike></div></td>
                         <!-- Task Complete Button -->
                         <td>
-                            <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
+                            <a href="{{ url('task/reComplete/1') }}" type="submit" class="btn btn-success">
                                 <i class="fa fa-btn fa-refresh"></i>Làm lại
                             </a>
                         </td>
@@ -107,6 +119,7 @@
                             </form>
                         </td>
                     </tr>
+
                     </tbody>
                 </table>
             </div>

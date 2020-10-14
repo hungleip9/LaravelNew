@@ -23,18 +23,17 @@ Route::get('hello1', function () {
     return view('hello1');
 });
 
-//Route::prefix('task')->group(function (){
-//    Route::get('/create',
-//        [\App\Http\Controllers\Task\TaskController::class, 'create'])
-//    ->name('task.create');
-//    Route::get('/edit',
-//        [\App\Http\Controllers\Task\TaskController::class, 'edit'])
-//        ->name('task.edit');
-//    Route::get('/index', [\App\Http\Controllers\Task\TaskController::class, 'index'])
-//        ->name('task.list');
-//});
-
 Route::resource( 'frontend/task', \Frontend\TaskController::class);
-Route::get('/',
-    [\App\Http\Controllers\HomeController::class,'index']
-);
+
+
+Route::group(["prefix" => "task", "as" => "task.", "namespace" => "Frontend"], function(){
+    Route::get("/", "TaskController@index");
+    Route::get("create", "TaskController@create");
+    Route::get("destroy/{id?}", "TaskController@destroy");
+    Route::get("edit/{id?}", "TaskController@edit");
+    Route::get("show/{id?}", "TaskController@show");
+    Route::get("store", "TaskController@store")->name("store");
+    Route::get("update/{id?}", "TaskController@update");
+    Route::get("complete/{id?}", "TaskController@complete");
+    Route::get("reComplete/{id?}", "TaskController@reComplete");
+});

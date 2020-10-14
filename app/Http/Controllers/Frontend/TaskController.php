@@ -27,8 +27,8 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        $name = $request->except(['_token']);
-//        $name = $request->only(['email','name','phone']);
+//        $name = $request->except(['_token']);
+        $name = $request->only(['name','deadline']);
 //        $name = $request->get('name','bien defone');
 
 
@@ -59,5 +59,11 @@ class TaskController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function complete($id){
+        return 'Ban da hoan thanh';
+    }
+    public function reComplete($id){
+        return 'Lam Lai';
     }
 }
