@@ -53,72 +53,72 @@
                     <th>&nbsp;</th>
                     </thead>
                     <tbody>
+                    @foreach($tasks as $task)
+                        <tr>
+                            <td>1</td>
+                            <td class="table-text"><div>{{$task->name}} </div></td>
+                            <!-- Task Complete Button -->
+                            <td>
+                                <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
+                                    <i class="fa fa-btn fa-check"></i>Hoàn thành
+                                </a>
+                            </td>
+                            <!-- Task Delete Button -->
+                            <td>
+                                <form action="{{ url('task/1') }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
 
-                    <tr>
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa fa-btn fa-trash"></i>Xoá
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
 
+{{--                    <tr>--}}
+{{--                        <td>2</td>--}}
+{{--                        <td class="table-text"><div>Làm bài tập PHP  </div></td>--}}
+{{--                        <!-- Task Complete Button -->--}}
+{{--                        <td>--}}
+{{--                            <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">--}}
+{{--                                <i class="fa fa-btn fa-check"></i>Hoàn thành--}}
+{{--                            </a>--}}
+{{--                        </td>--}}
+{{--                        <!-- Task Delete Button -->--}}
+{{--                        <td>--}}
+{{--                            <form action="{{ url('task/2') }}" method="POST">--}}
+{{--                                {{ csrf_field() }}--}}
+{{--                                {{ method_field('DELETE') }}--}}
 
-                        <td>1</td>
-                        <td class="table-text"><div>Làm bài tập Laravel </div></td>
-                        <!-- Task Complete Button -->
-                        <td>
-                            <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
-                                <i class="fa fa-btn fa-check"></i>Hoàn thành
-                            </a>
-                        </td>
-                        <!-- Task Delete Button -->
-                        <td>
-                            <form action="{{ url('task/1') }}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
+{{--                                <button type="submit" class="btn btn-danger">--}}
+{{--                                    <i class="fa fa-btn fa-trash"></i>Xoá--}}
+{{--                                </button>--}}
+{{--                            </form>--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
+{{--                    <tr>--}}
+{{--                        <td>3</td>--}}
+{{--                        <td class="table-text"><div><strike>Làm project Laravel </strike></div></td>--}}
+{{--                        <!-- Task Complete Button -->--}}
+{{--                        <td>--}}
+{{--                            <a href="{{ url('task/reComplete/1') }}" type="submit" class="btn btn-success">--}}
+{{--                                <i class="fa fa-btn fa-refresh"></i>Làm lại--}}
+{{--                            </a>--}}
+{{--                        </td>--}}
+{{--                        <!-- Task Delete Button -->--}}
+{{--                        <td>--}}
+{{--                            <form action="{{ url('task/3') }}" method="POST">--}}
+{{--                                {{ csrf_field() }}--}}
+{{--                                {{ method_field('DELETE') }}--}}
 
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fa fa-btn fa-trash"></i>Xoá
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td class="table-text"><div>Làm bài tập PHP  </div></td>
-                        <!-- Task Complete Button -->
-                        <td>
-                            <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
-                                <i class="fa fa-btn fa-check"></i>Hoàn thành
-                            </a>
-                        </td>
-                        <!-- Task Delete Button -->
-                        <td>
-                            <form action="{{ url('task/2') }}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fa fa-btn fa-trash"></i>Xoá
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td class="table-text"><div><strike>Làm project Laravel </strike></div></td>
-                        <!-- Task Complete Button -->
-                        <td>
-                            <a href="{{ url('task/reComplete/1') }}" type="submit" class="btn btn-success">
-                                <i class="fa fa-btn fa-refresh"></i>Làm lại
-                            </a>
-                        </td>
-                        <!-- Task Delete Button -->
-                        <td>
-                            <form action="{{ url('task/3') }}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fa fa-btn fa-trash"></i>Xoá
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
+{{--                                <button type="submit" class="btn btn-danger">--}}
+{{--                                    <i class="fa fa-btn fa-trash"></i>Xoá--}}
+{{--                                </button>--}}
+{{--                            </form>--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
 
                     </tbody>
                 </table>

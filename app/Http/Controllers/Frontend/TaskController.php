@@ -3,18 +3,19 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Task;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
 
-    public function index()
-    {
+    public function index(){
+        $tasks  = Task::where('status',1)
+            ->orderBy('name', 'desc')
+            ->take(5)
+            ->get();
         return view('task.list',[
-            'records' => [
-                1,2,3
-            ],
-            'i' => 2
+            'tasks'=> $tasks
         ]);
     }
 
@@ -39,7 +40,9 @@ class TaskController extends Controller
 
     public function show($id)
     {
-        //
+        $task = Task::find($id);
+        $task = Task::where('id', $id)->first();
+        dd($task->name);
     }
 
 
