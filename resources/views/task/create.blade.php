@@ -18,8 +18,9 @@
                         <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
 
                         <div class="col-sm-6">
-                            <input type="text" name="name" id="task-name" class="form-control" value="{{ $value }}">
-                            <input type="text" name="email" id="task-name" class="form-control" value="Email">
+                            <input type="text" name="name" id="task-name" class="form-control" value="name">
+                            <input type="text" name="content" id="task-name" class="form-control" value="content">
+                            <input type="text" name="deadline" id="task-name" class="form-control" value="deadline">
                         </div>
                     </div>
 

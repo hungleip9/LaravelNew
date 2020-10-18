@@ -11,7 +11,7 @@
                 <!-- Display Validation Errors -->
 
                 <!-- New Task Form -->
-                <form action="{{ route('task.store')}}" method="POST" class="form-horizontal">
+                <form action="{{ route('task.create')}}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
 
                 <!-- Task Name -->
@@ -19,12 +19,20 @@
                         <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
 
                         <div class="col-sm-6">
-                            <input type="text" name="name" id="task-name" class="form-control" value="{{ $value }}">
+                            <input type="text" name="name" id="task-name" class="form-control" value="name">
                         </div><br><br>
                         <label for="task-name" class="col-sm-3 control-label">Deadline</label>
                         <div class="col-sm-6">
-                            <input type="text" name="deadline" id="task-name" class="form-control" value="Deadline">
-                        </div>
+                            <input type="date" name="deadline" id="task-name" class="form-control" value="Deadline">
+                        </div><br><br>
+                        <label for="task-name" class="col-sm-3 control-label">Content</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="content" id="task-name" class="form-control" value="Content">
+                        </div><br><br>
+                        <label for="task-name" class="col-sm-3 control-label">Status</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="status" id="task-name" class="form-control" value="1">
+                        </div><br><br>
                     </div>
 
                     <!-- Add Task Button -->
@@ -65,7 +73,7 @@
                             </td>
                             <!-- Task Delete Button -->
                             <td>
-                                <form action="{{ url('task/1') }}" method="POST">
+                                <form action="{{ route('task.destroy', $task['id']) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 

@@ -28,12 +28,15 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-//        $name = $request->except(['_token']);
-        $name = $request->only(['name','deadline']);
-//        $name = $request->get('name','bien defone');
-
-
-        dd($name);
+        $task = new Task();
+        $task->name = $request->name;
+        $task->content = $request->content;
+        $task->deadline = $request->deadline;
+        $task->status = $request->status;
+        dd($task);
+        $task->save();
+        setcookie('msg', 'Thêm thành công', time() + 4);
+        return redirect(route('task.index'));
 
     }
 
@@ -61,7 +64,10 @@ class TaskController extends Controller
 
     public function destroy($id)
     {
-        //
+        $task = Task::find($id);
+        $task->delete();
+        setcookie("msg", "Xóa Thành công", time() + 4);
+        return redirect(route('task.index'));
     }
     public function complete($id){
         return 'Ban da hoan thanh';
