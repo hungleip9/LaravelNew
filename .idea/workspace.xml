@@ -3,10 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9cc6a2f3-4286-410c-af2b-0c13d5eb74e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Task/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Task/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_125328_create_tasks_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_125923_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_132405_add_avatar_column_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_18_035206_add_content_to_tasks.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/task/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/task/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/task/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/task/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/task/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/task/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +194,9 @@
       <workItem from="1602762755796" duration="7634000" />
       <workItem from="1602991558967" duration="522000" />
       <workItem from="1602992473994" duration="4556000" />
+      <workItem from="1603021928176" duration="391000" />
+      <workItem from="1603106661695" duration="8176000" />
+      <workItem from="1603278043924" duration="4754000" />
     </task>
     <servers />
   </component>
@@ -201,10 +212,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="347" y="61" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602770217387" />
-    <state x="295" y="55" key="FileChooserDialogImpl" timestamp="1602999530701">
+    <state x="295" y="55" key="FileChooserDialogImpl" timestamp="1603285130130">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="55" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602999530701" />
+    <state x="295" y="55" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603285130130" />
     <state x="471" y="270" key="NewPhpFileDialog" timestamp="1602333487999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

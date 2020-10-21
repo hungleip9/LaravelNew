@@ -18,9 +18,33 @@
                         <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
 
                         <div class="col-sm-6">
-                            <input type="text" name="name" id="task-name" class="form-control" value="name">
-                            <input type="text" name="content" id="task-name" class="form-control" value="content">
-                            <input type="text" name="deadline" id="task-name" class="form-control" value="deadline">
+                            <input type="text" name="name" id="task-name" class="form-control" value="Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-name" class="col-sm-3 control-label">Noi Dung Cong Viec</label>
+                        <div class="col-sm-6">
+                            <textarea name="content" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-name" class="col-sm-3 control-label">Thoi gian</label>
+                        <div class="col-sm-6">
+                            <input type="datetime-local" name="deadline" id="task-name" class="form-control" value="Deadline">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-name" class="col-sm-3 control-label">Muc do uu tien</label>
+                        <div class="col-sm-6">
+                            <select name="priority" class="col-sm-3 control-label form-control" id="">
+                                <option value="0">Binh Thuong</option>
+                                <option value="1">Quan Trong</option>
+                                <option value="2">Khan Cap</option>
+
+                            </select>
                         </div>
                     </div>
 

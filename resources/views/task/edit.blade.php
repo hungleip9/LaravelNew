@@ -12,17 +12,32 @@
                 <!-- Display Validation Errors -->
 
                 <!-- New Task Form -->
-                <form action="{{ url('task')}}" method="POST" class="form-horizontal">
+                <form action="{{ route('task.update',$task->id)}}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
-
+                @method('put')
                 <!-- Task Name -->
                     <div class="form-group">
                         <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
 
                         <div class="col-sm-6">
-                            <input type="text" name="name" id="task-name" class="form-control" value="{{ $value }}">
+                            <input type="text" name="name" id="task-name" class="form-control" value="{{$task->name}}">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="task-name" class="col-sm-3 control-label">Content</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="content" id="task-name" class="form-control" value="{{$task->content}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-name" class="col-sm-3 control-label">DeadLine</label>
+
+                        <div class="col-sm-6">
+                            <input type="datetime-local" name="deadline" id="task-name" class="form-control" value="{{$task->deadline}}">
+                        </div>
+                    </div>
+
 
                     <!-- Add Task Button -->
                     <div class="form-group">
